@@ -15,7 +15,7 @@ char **env;
 char *currentDir;
 
 void parser() {
-    int argCount = -1;
+    int argCount = 0;
     input[strnlen(input, MAX_CHAR) - 1] = 0;
         strncpy(backup, input, sizeof(input));
 
@@ -28,7 +28,6 @@ void parser() {
 
         token = strtok(backup, delim);
         command = token;
-        token = strtok(NULL, delim);
 
         args = malloc(argCount * sizeof(char *));
 
@@ -42,8 +41,8 @@ void parser() {
         }
 
         //code starts here
-
-
+        
+        
 
         //code ends here
 
